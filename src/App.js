@@ -10,13 +10,20 @@ import VisualAnalytics from "./images/VisualAnalytics";
 import BidirectionArrow from "./images/BidirectionArrow";
 import UserIcon from "./images/UserIcon";
 import BottomArrow from "./images/BottomArrow";
+import CenterImge from "./images/CenterImge";
+import Shadow from "./images/Shadow";
 
 function App() {
   const [allData, setAllData] = useState({
     fontFamily: "'IBM Plex Sans', sans-serif",
     textColor: "#000",
     primaryColor: "#E5F2F5",
+    mainBg: "#fff",
     secondaryColor: "rgb(229,242,245,.7)",
+    title: "Central AI Hub",
+    titleColor: "#000",
+    centerImage: <CenterImge color="#93DEF7" />,
+    shadowImage: <Shadow firstColor="#98A2B3" secondColor="#EFF7F9" />,
     downArrow: <BottomArrow color="#667085" />,
 
     data: [
@@ -43,6 +50,7 @@ function App() {
     ],
     dataBaseData: {
       title: "Structured Database",
+      titleColor: "#000",
       subTitle: "Industry Professionals",
       bidirectionalArrow: <BidirectionArrow color="#667085" />,
       borderColor: "#667085",
@@ -54,13 +62,13 @@ function App() {
       ],
       leftData: {
         icon: <InteractiveElementIcon color="#93DEF7" />,
-        info: "Interactive Elements",
+        info: "Interactive Elements ",
         bgColor: "#fff",
         borderColor: "#d0d5dd",
       },
       rightData: {
         icon: <VisualAnalytics color="#93DEF7" />,
-        info: "Visual Analytics",
+        info: "Visual Analytics ",
         bgColor: "#fff",
         borderColor: "#d0d5dd",
       },
@@ -72,6 +80,7 @@ function App() {
         "--primaryColor": allData.primaryColor,
         "--secondaryColor": allData.secondaryColor,
         "--textColor": allData.textColor,
+        "--mainBg": allData.mainBg,
         fontFamily: allData.fontFamily,
       }}
     >

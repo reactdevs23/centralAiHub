@@ -4,9 +4,19 @@ import Shadow from "../../images/Shadow";
 import styles from "./MainComponent.module.css";
 import Database from "../Database/Database";
 import IndustryProfessional from "../IndustryProfessional/IndustryProfessional";
-const MainComponent = ({ data, dataBaseData, downArrow }) => {
+const MainComponent = ({
+  title,
+  titleColor,
+  data,
+  dataBaseData,
+  downArrow,
+  centerImage,
+  shadowImage,
+}) => {
   return (
-    <div className="flex py-24  flex-col justify-center items-center min-h-screen w-full">
+    <div
+      className={`bg-[var(--mainBg)] flex py-24  flex-col justify-center items-center min-h-screen w-full`}
+    >
       <div
         className={styles.container}
         style={{ marginTop: data.length === 3 && "180px" }}
@@ -33,9 +43,11 @@ const MainComponent = ({ data, dataBaseData, downArrow }) => {
 
         <div className="relative  w-60	h-60 bg-[var(--secondaryColor)] rounded-full flex justify-center items-center">
           <div className="flex flex-col gap-5 w-[83%] h-[83%] bg-[var(--primaryColor)] justify-center items-center rounded-full">
-            <CenterImage color="#93DEF7" />
-            <p className="text-black text-center font-semibold text-lg leading-tight">
-              Central AI Hub
+            {centerImage}
+            <p
+              className={`text-[${titleColor}] text-center font-bold text-lg leading-tight`}
+            >
+              {title}
             </p>
             <div
               className={[
@@ -43,7 +55,7 @@ const MainComponent = ({ data, dataBaseData, downArrow }) => {
                 styles.shadow,
               ].join(" ")}
             >
-              <Shadow firstColor="#98A2B3" secondColor="#EFF7F9" />
+              {shadowImage}
               <div className={styles.bottomArrow}>{downArrow}</div>
             </div>
           </div>
