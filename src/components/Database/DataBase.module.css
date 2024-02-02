@@ -1,0 +1,36 @@
+.row {
+  border-bottom: 1px solid var(--borderColor);
+  padding: 8px;
+}
+.column {
+  border-right: 1px solid var(--borderColor);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+.column:last-child {
+  border-right: none;
+}
+.bar {
+  border-radius: 10px;
+  opacity: 0.3;
+  background: var(--smallBoxBg);
+  padding: 7px;
+  min-width: 100%;
+}
+.secondColumn .bar {
+  opacity: 0.2;
+}
+.thirdColumn .bar {
+  opacity: 0.1;
+}
+.title {
+  color: #000;
+  text-align: center;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 122.222%;
+}
