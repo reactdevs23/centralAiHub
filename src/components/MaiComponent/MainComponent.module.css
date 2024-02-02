@@ -67,12 +67,11 @@
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: -2;
 }
 .shadow {
   top: 48%;
   width: 83%;
-  z-index: -1;
+  z-index: -4;
 }
 .info {
   --space: 20px;

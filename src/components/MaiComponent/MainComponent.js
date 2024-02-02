@@ -15,7 +15,7 @@ const MainComponent = ({
 }) => {
   return (
     <div
-      className={`bg-[var(--mainBg)] flex py-24  flex-col justify-center items-center min-h-screen w-full`}
+      className={`bg-[var(--mainBg)] relative z-10 flex py-24  flex-col justify-center items-center min-h-screen w-full`}
     >
       <div
         className={styles.container}
@@ -42,7 +42,7 @@ const MainComponent = ({
         ))}
 
         <div
-          style={{ zIndex: 2 }}
+          style={{}}
           className="relative  w-60	h-60 bg-[var(--secondaryColor)] rounded-full flex justify-center items-center"
         >
           <div className="flex flex-col gap-5 w-[83%] h-[83%] bg-[var(--primaryColor)] justify-center items-center rounded-full">
