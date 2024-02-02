@@ -30,6 +30,16 @@ function App() {
         arrow: <Arrow2 color="#667085" />,
         info: "Unstructured Data B",
       },
+      {
+        icon: <Circle bgColor="#EFF7F9" color="#93DEF7" />,
+        arrow: <Arrow3 color="#667085" />,
+        info: "Documents",
+      },
+      {
+        icon: <Circle bgColor="#EFF7F9" color="#93DEF7" />,
+        arrow: <Arrow4 color="#667085" />,
+        info: "Mails",
+      },
     ],
     dataBaseData: {
       title: "Structured Database",
