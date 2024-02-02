@@ -3,7 +3,7 @@ import React from "react";
 const IndustryProfessional = ({ users, arrow, subTitle }) => {
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex items-center justify-center pt-16 gap-5">
+      <div className="flex items-center justify-center pt-16 gap-8">
         {users.map((el, i) => (
           <div className="relative" key={i}>
             {el}

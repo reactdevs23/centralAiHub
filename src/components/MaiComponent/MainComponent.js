@@ -44,9 +44,7 @@ const MainComponent = ({ data, dataBaseData, downArrow }) => {
               ].join(" ")}
             >
               <Shadow firstColor="#98A2B3" secondColor="#EFF7F9" />
-              <div className="absolute bottom-1/5 left-2/4 -translate-x-1/2">
-                {downArrow}
-              </div>
+              <div className={styles.bottomArrow}>{downArrow}</div>
             </div>
           </div>
         </div>
