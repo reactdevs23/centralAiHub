@@ -41,7 +41,10 @@ const MainComponent = ({
           </div>
         ))}
 
-        <div className="relative  w-60	h-60 bg-[var(--secondaryColor)] rounded-full flex justify-center items-center">
+        <div
+          style={{ zIndex: 2 }}
+          className="relative  w-60	h-60 bg-[var(--secondaryColor)] rounded-full flex justify-center items-center"
+        >
           <div className="flex flex-col gap-5 w-[83%] h-[83%] bg-[var(--primaryColor)] justify-center items-center rounded-full">
             {centerImage}
             <p
