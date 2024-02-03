@@ -62,13 +62,13 @@ function App() {
       ],
       leftData: {
         icon: <InteractiveElementIcon color="#93DEF7" />,
-        info: "Interactive Elements ",
+        info: "Interactive <br/>  Elements   ",
         bgColor: "#fff",
         borderColor: "#d0d5dd",
       },
       rightData: {
         icon: <VisualAnalytics color="#93DEF7" />,
-        info: "Visual Analytics ",
+        info: "Visual <br/> Analytics   ",
         bgColor: "#fff",
         borderColor: "#d0d5dd",
       },
