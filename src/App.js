@@ -16,9 +16,9 @@ import Shadow from "./images/Shadow";
 function App() {
   const [allData, setAllData] = useState({
     fontFamily: "'IBM Plex Sans', sans-serif",
+    mainBg: "#fff",
     textColor: "#000",
     primaryColor: "#E5F2F5",
-    mainBg: "#fff",
     secondaryColor: "rgb(229,242,245,.7)",
     title: "Central AI Hub",
     titleColor: "#000",

@@ -1,6 +1,5 @@
 import React from "react";
-import CenterImage from "../../images/CenterImge";
-import Shadow from "../../images/Shadow";
+
 import styles from "./MainComponent.module.css";
 import Database from "../Database/Database";
 import IndustryProfessional from "../IndustryProfessional/IndustryProfessional";

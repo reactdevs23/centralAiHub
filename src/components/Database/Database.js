@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "./DataBase.module.css";
 
 const Database = ({
@@ -9,29 +9,10 @@ const Database = ({
   borderColor,
   smallBoxBg,
 }) => {
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
-
-  useEffect(() => {
-    const leftHeight = leftRef.current.clientHeight;
-    const rightHeight = rightRef.current.clientHeight;
-    const maxHeight = Math.max(leftHeight, rightHeight);
-
-    // Set the same height for both left and right divs
-    leftRef.current.style.height = `${maxHeight}px`;
-    rightRef.current.style.height = `${maxHeight}px`;
-
-    const leftWidth = leftRef.current.clientWidth;
-    const rightWidth = rightRef.current.clientWidth;
-    const maxWidth = Math.max(leftWidth, rightWidth);
-    leftRef.current.style.width = `${maxWidth}px`;
-    rightRef.current.style.width = `${maxWidth}px`;
-  }, [leftData, rightData]);
   return (
     <div className="flex justify-between items-center gap-[32px]">
       <div
-        ref={leftRef}
-        className="left flex-1 rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px] h-[130px] flex items-center flex-col justify-center gap-[10px] p-[12px]"
+        className="left flex-1 rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px] h-[130px] flex items-center flex-col justify-center gap-[10px] p-[12px] border-[1px] border-[var(--borderColor)] "
         style={{
           background: leftData.bgColor,
           borderColor: leftData.borderColor,
@@ -79,8 +60,7 @@ const Database = ({
         </h2>
       </div>{" "}
       <div
-        ref={rightRef}
-        className="right flex-1 rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px] h-[130px] flex items-center flex-col justify-center gap-[10px] p-[12px]"
+        className="right flex-1 rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px] h-[130px] flex items-center flex-col justify-center gap-[10px] p-[12px] border-[1px] border-[var(--borderColor)]  "
         style={{
           background: rightData.bgColor,
           borderColor: rightData.borderColor,
