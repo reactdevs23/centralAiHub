@@ -25,14 +25,19 @@ const Database = ({
   }, [leftData, rightData]);
 
   return (
-    <div className="flex justify-center items-center gap-[32px] w-full">
+    <div
+      className="flex justify-center items-center gap-[32px] w-full"
+      style={{ "--titleColor": titleColor }}
+    >
       <div
         ref={leftRef}
-        className=" rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px]  min-h-[130px] flex items-center flex-col justify-center gap-[10px] max-w-[200px] p-[20px] border-[1px] border-[var(--borderColor)]  aspect-square "
+        className="  text-[var(--infoColor)] rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px]  min-h-[130px] flex items-center flex-col justify-center gap-[10px] max-w-[200px] p-[20px] border-[1px] border-[var(--borderColor)]  aspect-square "
         style={{
           background: leftData.bgColor,
           borderColor: leftData.borderColor,
           minWidth: maxWidth ? `${maxWidth}px` : "auto",
+
+          "--infoColor": leftData.infoColor,
         }}
       >
         <div className={styles.icon}>{leftData.icon}</div>
@@ -71,7 +76,8 @@ const Database = ({
           </div>
         </div>
         <h2
-          className={`text-[${titleColor}] text-center text-[18pt] not-italic font-semibold leading-[22pt]`}
+          style={{ color: titleColor }}
+          className={`text-[var(titleColor)] text-center text-[18pt] not-italic font-semibold leading-[22pt]`}
         >
           {" "}
           {title}
@@ -79,11 +85,12 @@ const Database = ({
       </div>{" "}
       <div
         ref={rightRef}
-        className="  rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px]  min-h-[130px] flex items-center flex-col justify-center gap-[10px] max-w-[200px] p-[17px] border-[1px] border-[var(--borderColor)]  aspect-square "
+        className="text-[var(--infoColor)]  rounded-full [box-shadow:2px_2px_24px_0px_rgba(0,_0,_0,_0.1)] min-w-[130px]  min-h-[130px] flex items-center flex-col justify-center gap-[10px] max-w-[200px] p-[17px] border-[1px] border-[var(--borderColor)]  aspect-square "
         style={{
           background: rightData.bgColor,
           borderColor: rightData.borderColor,
           minWidth: maxWidth ? `${maxWidth}px` : "auto",
+          "--infoColor": rightData.infoColor,
         }}
       >
         <div className={styles.icon}>{rightData.icon}</div>

@@ -11,6 +11,8 @@ const MainComponent = ({
   downArrow,
   centerImage,
   shadowImage,
+  label,
+  labelColor,
 }) => {
   return (
     <div
@@ -44,10 +46,14 @@ const MainComponent = ({
           style={{}}
           className="relative  w-60	h-60 bg-[var(--secondaryColor)] rounded-full flex justify-center items-center"
         >
-          <div className="flex flex-col gap-5 w-[83%] h-[83%] bg-[var(--primaryColor)] justify-center items-center rounded-full">
+          <div
+            className="flex flex-col gap-5 w-[83%] h-[83%] bg-[var(--primaryColor)] justify-center items-center rounded-full"
+            style={{ "--titleColor": titleColor }}
+          >
             {centerImage}
             <p
-              className={`text-[${titleColor}] text-center font-bold text-lg leading-tight`}
+              style={{ color: titleColor }}
+              className={` text-center font-bold text-lg leading-tight`}
             >
               {title}
             </p>
@@ -67,8 +73,15 @@ const MainComponent = ({
       <IndustryProfessional
         users={dataBaseData.users}
         arrow={dataBaseData.bidirectionalArrow}
-        subtitle={dataBaseData.subTitle}
+        subTitle={dataBaseData.subTitle}
+        subTitleColor={dataBaseData.subTitleColor}
       />
+      {/* <p
+        className={styles.label}
+        style={{ "--labelColor": dataBaseData.subTitleColor }}
+      >
+        {dataBaseData.subTitle}
+      </p> */}
     </div>
   );
 };

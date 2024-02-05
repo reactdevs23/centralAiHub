@@ -1,8 +1,11 @@
 import React from "react";
 
-const IndustryProfessional = ({ users, arrow, subTitle }) => {
+const IndustryProfessional = ({ users, arrow, subTitle, subTitleColor }) => {
   return (
-    <div className="flex flex-col gap-5">
+    <div
+      className="flex flex-col gap-5"
+      style={{ "--subTitleColor": subTitleColor }}
+    >
       <div className="flex items-center justify-center pt-16 gap-8">
         {users.map((el, i) => (
           <div className="relative" key={i}>
@@ -13,7 +16,7 @@ const IndustryProfessional = ({ users, arrow, subTitle }) => {
           </div>
         ))}
       </div>{" "}
-      <p className="text-[#000] text-center text-[16px] not-italic font-normal leading-[137.5%]">
+      <p className="text-[var(--subTitleColor)] text-center text-[16px] not-italic font-normal leading-[20px]">
         {subTitle}
       </p>
     </div>
